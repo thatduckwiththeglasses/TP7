@@ -25,8 +25,7 @@ public class MatrizObjetos {
 		if ((row < 0) || (col < 0)) {
 			throw new MatrizException(3);
 		}else
-			cuerpo[row].add(col,obj);
-		
+			cuerpo[row].add(col,obj);		
 		
 	}
 	

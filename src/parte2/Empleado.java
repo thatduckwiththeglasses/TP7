@@ -21,7 +21,7 @@ public class Empleado {
 		}
 		if (sueldo == null) {
 			throw new EnteroPositivoException(0);
-		} else if (sueldo.intValue() < 0) {
+		} else if (sueldo.intValue() <= 0) {
 			throw new EnteroPositivoException(1);
 		} else {
 			this.sueldo = sueldo;
@@ -44,7 +44,7 @@ public class Empleado {
 		super();
 		if (sueldo == null) {
 			throw new EnteroPositivoException(0);
-		} else if (sueldo.intValue() < 0) {
+		} else if (sueldo.intValue() <= 0) {
 			throw new EnteroPositivoException(1);
 		} else {
 			this.sueldo = sueldo;
@@ -83,8 +83,14 @@ public class Empleado {
 		return "$" + sueldo;
 	}
 	
-	public void setLegajo(Integer legajo) {
-		this.legajo = legajo;
+	public void setLegajo(Integer legajo) throws EnteroPositivoException{
+		if (legajo == null) {
+			throw new EnteroPositivoException(0);
+		} else if (legajo.intValue() < 0) {
+			throw new EnteroPositivoException(1);
+		} else {
+			this.legajo = legajo;
+		}
 	}
 
 	@Override

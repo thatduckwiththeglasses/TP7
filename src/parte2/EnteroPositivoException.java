@@ -6,8 +6,8 @@ public class EnteroPositivoException extends Exception {
 	public static final int ERR_ENTERO_NEGATIVO = 1;
 	
 	private static final String[] Errores = {
-			"El nombre no puede ser null", 
-			"El nombre debe tener mas de 3 letras."
+			"no puede ser null", 
+			"no puede ser negativo."
 			} ;
 	
 	private String name;
