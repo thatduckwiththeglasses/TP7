@@ -18,14 +18,9 @@ public class EmpleadoService {
 	}
 
 	// Devuelve el empleado de mayor sueldo
-	public static Empleado mayorSueldo() {
+	public static Empleado mayorSueldo() throws EnteroPositivoException {
 		Empleado mayor;
-		try {
-			mayor = new Empleado(0);
-		} catch (EnteroPositivoException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		mayor = new Empleado(0);
 		Iterator<Empleado> iterador = empleados.iterator();
 		while (iterador.hasNext()) {
 			Empleado empleado = iterador.next();
